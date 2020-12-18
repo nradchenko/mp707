@@ -1,0 +1,7 @@
+*
+!*/
+!**/*.go
+!go.mod
+!LICENSE
+!Makefile
+!README.md
