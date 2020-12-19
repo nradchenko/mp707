@@ -136,7 +136,7 @@ func Lookup() (devices []Device, ue *LibUsbError) {
 			ue = err
 			break
 		} else if vendor == VendorId && product == ProductId {
-			handle := &C.struct_libusb_device_handle{}
+			var handle *C.struct_libusb_device_handle
 			if err := C.libusb_open(C.get_dev(li, C.int(i)), &handle); err != 0 {
 				ue = MakeLibUsbError(err)
 				continue
