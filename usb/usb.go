@@ -11,8 +11,7 @@ Based on protocol implementation in:
 package usb
 
 /*
- #cgo LDFLAGS: -lusb-1.0
- #include <stdint.h>
+ #cgo pkg-config: libusb-1.0
  #include <libusb-1.0/libusb.h>
 
  libusb_device *get_dev(libusb_device **list, int offset) {
