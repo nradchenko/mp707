@@ -30,7 +30,7 @@ clean:
 build: cmd/$(NAME)/$(NAME)
 
 .PHONY: static
-static: LDFLAGS += -linkmode external -extldflags '-static -ludev'
+static: LDFLAGS += -linkmode external -extldflags '-static $(shell pkg-config --libs libudev)'
 static: build
 
 cmd/$(NAME)/$(NAME):
