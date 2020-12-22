@@ -1,0 +1,15 @@
+.git/
+.gitignore
+
+.idea/
+
+.dockerignore
+Dockerfile
+
+cmd/mp707/mp707
+
+LICENSE
+README.md
+
+release/
+scripts/
