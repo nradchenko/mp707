@@ -581,7 +581,7 @@ func (d *Device) GetTemperature(rom onewire.Rom) (temperature Temperature, err e
 			continue
 		}
 
-		k := float32(l1 & 0xffff)
+		k := float32(int16(l1 & 0xffff))
 
 		switch onewire.GetFamilyByRom(rom) {
 		case onewire.FamilyDS18B20:
